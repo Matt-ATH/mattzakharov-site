@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matt Zakharov Unlimited</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    :root {
+      --accent: #00c896;
+      --dark: #0e0e0e;
+      --light: #f0f0f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+    }
+
+    .navbar {
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar .logo {
+      font-weight: 800;
+      font-size: 1.5rem;
+      background: linear-gradient(90deg, #9945ff, #14f195);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background: none;
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #1b1b1b;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      gap: 4rem;
+      padding: 6rem 2rem;
+    }
+
+    .hero img {
+      max-width: 700px;
+      width: 100%;
+      box-shadow: none;
+    }
+
+    .tiers {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5rem;
+      margin-top: 4rem;
+      padding: 2rem;
+    }
+
+    .tier {
+      background: #111;
+      border-radius: 1rem;
+      padding: 2rem;
+      color: white;
+      box-shadow: 0 0 40px rgba(0, 255, 200, 0.5);
+      width: 320px;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .tier:hover {
+      transform: scale(1.05);
+    }
+
+    .tier img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tier a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .social-icons img {
+      height: 100px;
+      margin: 0 1rem;
+    }
+
+    .about-section {
+      padding: 5rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      background-color: #0e0e0e;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1200px;
+    }
+
+    .about-content img {
+      width: 300px;
+      border-radius: 1rem;
+      box-shadow: 0 0 60px rgba(0, 255, 200, 0.35);
+    }
+
+    .about-content .text {
+      max-width: 600px;
+      font-size: 1.4rem;
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #9945ff, #14f195);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer {
+      padding: 2rem;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .footer h4 {
+      margin: 0 0 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MATT ZAKHAROV UNLIMITED</div>
+    <div class="nav-links">
+      <div class="dropdown">
+        <button class="dropbtn">Explore ▼</button>
+        <div class="dropdown-content">
+          <a href="#">Amazon Book</a>
+          <a href="#">Sober Coin</a>
+          <a href="#">Social Media</a>
+          <a href="#">Website Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">More</a>
+        </div>
+      </div>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <h1>BUILD FAST. SELL FASTER.</h1>
+      <p>Your website should close deals – not just sit pretty. I build lean, fast-loading sites that turn cold leads into paying clients. Built fast. Delivered clean. Optimized to convert.</p>
+      <button class="btn">LET'S BUILD</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero.png" alt="Tear Image" />
+    </div>
+  </header>
+
+  <section class="section" id="services">
+    <h2 style="text-align:center;">EXCLUSIVE SERVICES</h2>
+    <div class="tiers">
+      <div class="tier">
+        <a href="turbosite.html">
+          <img src="images/tier1.png" alt="Tier 1">
+          <h3>🚀 TURBOSITE — $200</h3>
+          <p>A clean, high-performing one-page site. Includes mobile optimization and a clear CTA.</p>
+        </a>
+      </div>
+      <div class="tier">
+        <a href="marketmaster.html">
+          <img src="images/tier2.png" alt="Tier 2">
+          <h3>📈 MARKETMASTER — $400</h3>
+          <p>Multi-page site with SEO, About/Contact pages, and optional booking/blog features.</p>
+        </a>
+      </div>
+      <div class="tier">
+        <a href="turboboost.html">
+          <img src="images/tier3.png" alt="Tier 3">
+          <h3>🔥 TURBOBOOST PRO — $1000</h3>
+          <p>Complete funnel build, automation, revisions, and long-term scaling features.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-content">
+      <img src="images/matt.png" alt="Matt Zakharov">
+      <div class="text">
+        <h2>🔥 ABOUT MATT ZAKHAROV</h2>
+        <p>I build websites that move fast and close faster. I’m Matt Zakharov – builder, strategist, and operator. I flip websites and close deals from cold leads. Every site I build is designed to perform, generate leads, build trust, and be unforgettable.</p>
+        <p>If you’re serious about leveling up and doing it fast, clean, and with real results — I’d love to work with you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="social-section">
+    <h2 style="text-align:center;">FOLLOW ME</h2>
+    <div class="social-icons" style="text-align:center;">
+      <a href="https://www.instagram.com/mattzakharov/" target="_blank"><img src="images/social-insta.png" alt="Instagram"></a>
+      <a href="https://x.com/mattzakharov" target="_blank"><img src="images/social-x.png" alt="X"></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h4>MATT ZAKHAROV UNLIMITED</h4>
+      <p>High-performance sites built with speed & results in mind.</p>
+    </div>
+    <div>
+      <h4>Seattle, WA</h4>
+      <p>Available for work worldwide</p>
+    </div>
+    <div>
+      <h4>Social</h4>
+      <p>@mattzakharov on Instagram or X</p>
+    </div>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.hero-text', {
+      delay: 200,
+      origin: 'left',
+      distance: '80px',
+      duration: 1200,
+      scale: 0.9,
+      rotate: { x: 0, y: 20, z: 0 },
+      easing: 'ease-in-out',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.hero-image', {
+      delay: 400,
+      origin: 'right',
+      distance: '100px',
+      duration: 1300,
+      rotate: { x: 0, y: -20, z: 0 },
+      easing: 'cubic-bezier(0.5, 0, 0, 1.5)',
+      scale: 1.05,
+      reset: true
+    });
+
+    ScrollReveal().reveal('.tier', {
+      interval: 250,
+      origin: 'bottom',
+      distance: '60px',
+      duration: 1100,
+      scale: 0.95,
+      rotate: { x: 0, y: 0, z: 10 },
+      easing: 'ease-out',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.social-icons', {
+      delay: 300,
+      origin: 'bottom',
+      distance: '50px',
+      duration: 1000,
+      scale: 1.1,
+      easing: 'ease',
+      reset: true
+    });
+
+    ScrollReveal().reveal('.about-content', {
+      delay: 300,
+      origin: 'left',
+      distance: '60px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      reset: true
+    });
+  </script>
+</body>
+</html>
